@@ -7,7 +7,6 @@ calc a = summe(convertToInt(split a ','))
 split :: [Char] -> Char -> [[Char]]
 split string needle
     | first == "" && recurse == "" = []
-    | recurse == "" = [first]
     | otherwise = [first] ++ split recurse needle
     where (first, recurse) = getUpTo("", string) needle
 
